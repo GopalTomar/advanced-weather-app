@@ -7,7 +7,9 @@ load_dotenv()
 
 class Config:
     # API Configuration
-    API_KEY = "064213e30cac368a77dc3ce82ee6696c"
+    API_KEY = os.getenv("OPENWEATHER_API_KEY", "YOUR_DEFAULT_PUBLIC_KEY_IF_ANY")
+# For a real private key, you'd typically remove the default or make it None.
+# For this public key, keeping it as a default is acceptable, but using os.getenv is safer for private keys.
     BASE_URL = "https://api.openweathermap.org/data/2.5"
     GEOCODING_URL = "https://api.openweathermap.org/geo/1.0"
     
@@ -38,4 +40,5 @@ class Config:
         "metric": {"temp": "°C", "speed": "m/s", "pressure": "hPa"},
         "imperial": {"temp": "°F", "speed": "mph", "pressure": "hPa"},
         "standard": {"temp": "K", "speed": "m/s", "pressure": "hPa"}
+
     }
