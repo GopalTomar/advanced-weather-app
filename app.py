@@ -36,11 +36,12 @@ def load_css():
     
     /* Global Styles */
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
         min-height: 100vh;
         font-family: 'Inter', sans-serif;
         position: relative;
         overflow-x: hidden;
+        color: white;
     }
     
     /* Animated Background Particles */
@@ -76,17 +77,18 @@ def load_css():
     /* Main Content Area */
     .main .block-container {
         padding-top: 2rem;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(20px);
         border-radius: 20px;
         margin: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        color: white;
     }
     
     /* Animated Title */
     .main-title {
-        background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+        background: linear-gradient(45deg, #ffffff, #e3f2fd, #ffffff);
         background-size: 300% 300%;
         background-clip: text;
         -webkit-background-clip: text;
@@ -96,7 +98,8 @@ def load_css():
         font-size: 3.5rem;
         font-weight: 700;
         margin-bottom: 0.5rem;
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
     }
     
     @keyframes gradientShift {
@@ -106,11 +109,13 @@ def load_css():
     
     /* Subtitle with typing animation */
     .subtitle {
-        color: rgba(255, 255, 255, 0.8);
+        color: #ffffff;
         text-align: center;
         font-size: 1.2rem;
         margin-bottom: 2rem;
         animation: fadeInUp 1s ease-out 0.5s both;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        font-weight: 400;
     }
     
     @keyframes fadeInUp {
@@ -126,14 +131,14 @@ def load_css():
     
     /* Glassmorphism Weather Cards */
     .weather-card {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
         padding: 2rem;
         border-radius: 20px;
         color: white;
         margin: 1.5rem 0;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
@@ -174,16 +179,17 @@ def load_css():
     
     /* Enhanced Metric Cards */
     .metric-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(15px);
         padding: 1.5rem;
         border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
         margin: 0.5rem 0;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
+        color: white;
     }
     
     .metric-card:hover {
@@ -236,37 +242,45 @@ def load_css():
     
     /* Input Fields */
     .stTextInput > div > div > input {
-        background: rgba(255, 255, 255, 0.1);
-        color: white;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 15px;
-        padding: 0.75rem 1rem;
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
+        background: rgba(0, 0, 0, 0.4) !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 15px !important;
+        padding: 0.75rem 1rem !important;
+        backdrop-filter: blur(10px) !important;
+        transition: all 0.3s ease !important;
+        font-weight: 500 !important;
     }
     
     .stTextInput > div > div > input:focus {
-        border: 2px solid #667eea;
-        background: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+        border: 2px solid #64b5f6 !important;
+        background: rgba(0, 0, 0, 0.6) !important;
+        box-shadow: 0 0 20px rgba(100, 181, 246, 0.3) !important;
+        color: white !important;
+    }
+    
+    .stTextInput > div > div > input::placeholder {
+        color: rgba(255, 255, 255, 0.6) !important;
     }
     
     /* Forecast Cards */
     .forecast-card {
-        background: linear-gradient(135deg, rgba(168, 230, 207, 0.2), rgba(127, 205, 205, 0.2));
+        background: linear-gradient(135deg, rgba(100, 181, 246, 0.2), rgba(33, 150, 243, 0.2));
         backdrop-filter: blur(15px);
         padding: 1.5rem;
         border-radius: 15px;
         margin: 0.5rem 0;
         text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(100, 181, 246, 0.3);
         transition: all 0.3s ease;
         animation: fadeInScale 0.5s ease-out;
+        color: white;
     }
     
     .forecast-card:hover {
         transform: scale(1.05);
-        background: linear-gradient(135deg, rgba(168, 230, 207, 0.3), rgba(127, 205, 205, 0.3));
+        background: linear-gradient(135deg, rgba(100, 181, 246, 0.3), rgba(33, 150, 243, 0.3));
+        box-shadow: 0 8px 25px rgba(100, 181, 246, 0.2);
     }
     
     @keyframes fadeInScale {
@@ -282,25 +296,27 @@ def load_css():
     
     /* Success and Error Cards */
     .success-card {
-        background: linear-gradient(135deg, rgba(0, 184, 148, 0.2), rgba(0, 160, 133, 0.2));
-        color: #00b894;
+        background: linear-gradient(135deg, rgba(46, 204, 113, 0.3), rgba(39, 174, 96, 0.3));
+        color: #2ecc71;
         padding: 1rem;
         border-radius: 15px;
         margin: 1rem 0;
-        border: 1px solid rgba(0, 184, 148, 0.3);
-        backdrop-filter: blur(10px);
+        border: 1px solid rgba(46, 204, 113, 0.4);
+        backdrop-filter: blur(15px);
         animation: slideInRight 0.5s ease-out;
+        font-weight: 500;
     }
     
     .error-card {
-        background: linear-gradient(135deg, rgba(255, 118, 117, 0.2), rgba(214, 48, 49, 0.2));
-        color: #ff7675;
+        background: linear-gradient(135deg, rgba(231, 76, 60, 0.3), rgba(192, 57, 43, 0.3));
+        color: #e74c3c;
         padding: 1rem;
         border-radius: 15px;
         margin: 1rem 0;
-        border: 1px solid rgba(255, 118, 117, 0.3);
-        backdrop-filter: blur(10px);
+        border: 1px solid rgba(231, 76, 60, 0.4);
+        backdrop-filter: blur(15px);
         animation: slideInRight 0.5s ease-out;
+        font-weight: 500;
     }
     
     @keyframes slideInRight {
@@ -316,10 +332,28 @@ def load_css():
     
     /* Selectbox Styling */
     .stSelectbox > div > div {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.4) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 15px !important;
+        backdrop-filter: blur(10px) !important;
+        color: white !important;
+    }
+    
+    .stSelectbox > div > div > div {
+        color: white !important;
+    }
+    
+    /* Text Area Styling */
+    .stTextArea > div > div > textarea {
+        background: rgba(0, 0, 0, 0.4) !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 15px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    .stTextArea > div > div > textarea::placeholder {
+        color: rgba(255, 255, 255, 0.6) !important;
     }
     
     /* Sidebar Elements */
@@ -334,11 +368,13 @@ def load_css():
     .hover-glow {
         transition: all 0.3s ease;
         cursor: pointer;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
     
     .hover-glow:hover {
-        color: #667eea;
-        text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+        color: #64b5f6;
+        text-shadow: 0 0 15px rgba(100, 181, 246, 0.8);
         transform: scale(1.05);
     }
     
@@ -387,15 +423,37 @@ def load_css():
         50% { transform: translateY(-10px); }
     }
     
-    /* Chart Containers */
-    .chart-container {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(15px);
-        border-radius: 20px;
-        padding: 1rem;
-        margin: 1rem 0;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Global text styling for better visibility */
+    .stApp, .stApp * {
+        color: white !important;
     }
+    
+    /* Override Streamlit's default text colors */
+    .stMarkdown, .stMarkdown p, .stMarkdown div {
+        color: white !important;
+    }
+    
+    .stText {
+        color: white !important;
+    }
+    
+    .stCaption {
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+    
+    /* Headers */
+    h1, h2, h3, h4, h5, h6 {
+        color: white !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+    
+    /* Metric labels */
+    .metric-label {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Remove the footer class and replace with inline styles */
     
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -1675,22 +1733,31 @@ def main():
     # Enhanced footer
     st.markdown('<div style="height: 3rem;"></div>', unsafe_allow_html=True)
     st.markdown("""
-    <div class="footer">
+    <div style="
+        text-align: center;
+        color: white;
+        padding: 2rem;
+        margin-top: 3rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 20px 20px 0 0;
+    ">
         <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
             <div style="text-align: center;">
                 <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌤️</div>
-                <div style="font-weight: 600;">Advanced Weather App</div>
-                <div style="font-size: 0.9rem; opacity: 0.7;">Built with Streamlit & OpenWeatherMap API</div>
+                <div style="font-weight: 600; color: white; font-size: 1.1rem;">Advanced Weather App</div>
+                <div style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">Built with Streamlit & OpenWeatherMap API</div>
             </div>
         </div>
         
         <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            <div style="text-align: center; font-size: 0.9rem; opacity: 0.6;">
-                🚀 Enhanced with animations, glassmorphism UI, and interactive elements
+            <div style="text-align: center; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">
+                Enhanced with animations, glassmorphism UI, and interactive elements
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """)
 
 if __name__ == "__main__":
     main()
