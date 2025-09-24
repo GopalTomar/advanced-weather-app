@@ -1371,3 +1371,4 @@ def main():
             © 2024 Advanced Weather App | Made for weather enthusiasts
         </div>
     </div>
+    """, unsafe_allow_html=True)
